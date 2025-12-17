@@ -1,0 +1,27 @@
+#Debian
+Types: deb deb-src
+URIs: https://deb.debian.org/debian/
+Suites: stable-backports-sloppy stable-backports stable-updates stable
+Components: contrib main non-free-firmware non-free
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+
+#Debian Security
+Types: deb deb-src
+URIs: https://deb.debian.org/debian-security/
+Suites: stable-security
+Components: contrib main non-free-firmware non-free
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+
+#Debian Debug
+Types: deb deb-src
+URIs: https://deb.debian.org/debian-debug/
+Suites: stable-backports-debug stable-backports-sloppy-debug stable-debug stable-proposed-updates-debug
+Components: contrib main non-free-firmware non-free
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+
+#Debian Security Debug
+Types: deb deb-src
+URIs: https://deb.debian.org/debian-security-debug/
+Suites: stable-security-debug
+Components: contrib main non-free-firmware non-free
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
