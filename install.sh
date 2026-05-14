@@ -42,6 +42,5 @@ sudo a2enmod headers
 sudo a2enmod expires
 sudo systemctl restart apache2
 echo "<?php phpinfo(); ?>" | sudo tee /var/www/html/info.php
-curl -fsSL https://tailscale.com/install.sh | sh && sudo tailscale up --auth-key=tskey-auth-kN3i1Mi9fK11CNTRL-2Mv6Xsm5mWGazpobf3gfVGcRB1hRGtvnU
 sudo tailscale funnel --bg 80
 sudo poweroff
