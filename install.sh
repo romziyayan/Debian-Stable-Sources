@@ -36,8 +36,7 @@ sudo chmod 600 $swapFile
 sudo mkswap -f $swapFile
 sudo swapon $swapFile
 echo "$swapFile swap swap defaults 0 0" | sudo tee -a /etc/fstab
-sudo apt install htop btop git curl wget fastfetch screen tmux tasksel -y
-sudo apt install apache2 apache2-doc mariadb-server mariadb-client php libapache2-mod-php php-mysql lsb-release -y
+sudo apt install htop btop git curl wget fastfetch screen tmux tasksel traceroute apache2 apache2-doc mariadb-server mariadb-client php libapache2-mod-php php-mysql lsb-release -y
 sudo a2enmod rewrite
 sudo a2enmod headers
 sudo a2enmod expires
