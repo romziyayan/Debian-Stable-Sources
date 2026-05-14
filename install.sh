@@ -36,6 +36,7 @@ sudo chmod 600 $swapFile
 sudo mkswap -f $swapFile
 sudo swapon $swapFile
 echo "$swapFile swap swap defaults 0 0" | sudo tee -a /etc/fstab
+echo "59 23 * * 0 /sbin/reboot" | sudo crontab -
 sudo apt install htop btop git curl wget fastfetch screen tmux tasksel traceroute apache2 apache2-doc mariadb-server mariadb-client php libapache2-mod-php php-mysql lsb-release -y
 sudo a2enmod rewrite
 sudo a2enmod headers
@@ -43,4 +44,3 @@ sudo a2enmod expires
 sudo systemctl restart apache2
 echo "<?php phpinfo(); ?>" | sudo tee /var/www/html/info.php
 sudo tailscale funnel --bg 80
-sudo poweroff
