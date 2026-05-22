@@ -44,4 +44,10 @@ sudo a2enmod expires
 sudo systemctl restart apache2
 echo "<?php phpinfo(); ?>" | sudo tee /var/www/html/info.php
 sudo timedatectl set-timezone Asia/Jakarta
-sudo tailscale funnel --bg 80
+echo "LANG=en_US.UTF-8
+LANGUAGE=en_US.UTF-8
+LC_ALL=id_ID.UTF-8" | sudo tee /etc/locale.conf
+echo "C.UTF-8 UTF-8
+en_US.UTF-8 UTF-8
+id_ID.UTF-8 UTF-8" | sudo tee /etc/locale.gen
+sudo locale-gensudo tailscale funnel --bg 80
