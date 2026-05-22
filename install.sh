@@ -37,7 +37,7 @@ sudo swapon $swapFile
 echo "$swapFile swap swap defaults 0 0" | sudo tee -a /etc/fstab
 echo "59 23 * * 0 /sbin/reboot" | sudo crontab -
 sudo apt update
-sudo apt install htop btop git curl wget fastfetch screen tmux tasksel traceroute apache2 apache2-doc mariadb-server mariadb-client php libapache2-mod-php php-mysql lsb-release -y
+sudo apt install htop btop git curl wget fastfetch screen tmux tasksel traceroute apache2 apache2-doc mariadb-server mariadb-client php libapache2-mod-php php-mysql lsb-release locales -y
 sudo a2enmod rewrite
 sudo a2enmod headers
 sudo a2enmod expires
@@ -50,4 +50,5 @@ LC_ALL=id_ID.UTF-8" | sudo tee /etc/locale.conf
 echo "C.UTF-8 UTF-8
 en_US.UTF-8 UTF-8
 id_ID.UTF-8 UTF-8" | sudo tee /etc/locale.gen
-sudo locale-gensudo tailscale funnel --bg 80
+sudo locale-gen
+sudo tailscale funnel --bg 80
