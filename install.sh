@@ -37,7 +37,7 @@ sudo swapon $swapFile
 echo "$swapFile swap swap defaults 0 0" | sudo tee -a /etc/fstab
 echo "59 23 * * 0 /sbin/reboot" | sudo crontab -
 sudo apt update
-sudo apt install htop btop git curl wget fastfetch screen tmux tasksel traceroute apache2 apache2-doc mariadb-server mariadb-client php libapache2-mod-php php-mysql lsb-release locales python3 python3-pip python3-venv python3-dev nodejs npm -y
+sudo apt install htop btop git curl wget fastfetch screen tmux tasksel traceroute apache2 apache2-doc mariadb-server mariadb-client php libapache2-mod-php php-mysql lsb-release locales python3 python3-pip python3-venv python3-dev python3-full nodejs npm -y
 sudo a2enmod rewrite
 sudo a2enmod headers
 sudo a2enmod expires
