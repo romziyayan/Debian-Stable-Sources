@@ -1,9 +1,6 @@
 #!/bin/bash
 clear
-if [ "$EUID" -ne 0 ]; then
-	echo "Elevating privileges..."
-	exec sudo "$0" "$@"
-fi
+sudo bash -c '
 mv /etc/apt/sources.list /etc/apt/sources.list~
 mv /etc/apt/sources.list.d/debian.sources /etc/apt/sources.list.d/debian.sources~
 echo "#Debian
@@ -64,4 +61,4 @@ LC_ALL=id_ID.UTF-8" | tee /etc/locale.conf
 echo "en_US.UTF-8 UTF-8
 id_ID.UTF-8 UTF-8" | tee -a /etc/locale.gen
 locale-gen
-tailscale funnel --bg 80
+tailscale funnel --bg 80'
