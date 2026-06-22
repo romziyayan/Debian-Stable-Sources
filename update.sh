@@ -1,5 +1,4 @@
 #!/bin/bash
-clear
 sudo bash -c '
 mv /etc/apt/sources.list /etc/apt/sources.list~
 mv /etc/apt/sources.list.d/debian.sources /etc/apt/sources.list.d/debian.sources~
