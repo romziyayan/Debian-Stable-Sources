@@ -7,4 +7,5 @@ if [ "$EUID" -ne 0 ]; then
   exec sudo "$0" "$@"
 fi
 
-whoami
+apt update
+apt upgrade -y
