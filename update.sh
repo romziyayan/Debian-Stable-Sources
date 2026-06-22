@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 
-if if [ "$EUID" -ne 0 ]; then
+if [ "$EUID" -ne 0 ]; then
   echo "This script requires root privileges. Elevating via sudo..."
   exec sudo "$0" "$@"
 fi
