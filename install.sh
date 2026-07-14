@@ -51,3 +51,5 @@ echo "en_US.UTF-8 UTF-8
 id_ID.UTF-8 UTF-8" | sudo tee -a /etc/locale.gen
 sudo locale-gen
 sudo tailscale funnel --bg 80
+sudo systemctl daemon-reload
+sudo systemctl soft-reboot
